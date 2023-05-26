@@ -3,6 +3,7 @@ on: [respository_dispatch, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
       - name: Cache test file
         uses: actions/cache/restore@v3
         with:

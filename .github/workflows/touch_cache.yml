@@ -5,6 +5,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
       - name: Cache test file
         uses: actions/cache/restore@v3
         with:
