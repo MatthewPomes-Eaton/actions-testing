@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses actions/checkout@v2
+      - uses: actions/checkout@v2
       - run: echo "Created File" > test_file
       - name: Cache test file
         uses: actions/cache/save@v3
