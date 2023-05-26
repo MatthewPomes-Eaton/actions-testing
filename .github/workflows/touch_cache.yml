@@ -1,0 +1,13 @@
+name: Keep Cache Alive
+on:
+  schedule:
+    - cron: "0 9 * * 2"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+      - name: Cache test file
+        uses: actions/cache/restore@v3
+        with:
+          key: test_file
+          path: test_file
+

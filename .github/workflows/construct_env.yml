@@ -1,0 +1,14 @@
+name: Build Environment
+run-name: ${{ github.actor }} building environment
+on: [respository_dispatch, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+      - uses actions/checkout@v2
+      - run: echo "Created File" > test_file
+      - name: Cache test file
+        uses: actions/cache/save@v3
+        with:
+          key: test_file
+          path: test_file
+
