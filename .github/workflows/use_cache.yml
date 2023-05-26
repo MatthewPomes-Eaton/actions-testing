@@ -1,5 +1,5 @@
 name: Keep Cache Alive
-on: [respository_dispatch, workflow_dispatch]
+on: [workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
